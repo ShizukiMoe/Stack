@@ -75,6 +75,18 @@
         </li>
         {{ end }}
         <li class="menu-bottom-section">
+            <section class="powerby">
+                {{- $ThemeVersion := "3.30.0" -}}
+                {{- $Theme := printf `<a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="nofollow" data-version="%s">Stack</a>` $ThemeVersion -}}
+                {{- $DesignedBy := `<a href="https://jimmycai.com" target="_blank" rel="nofollow">Jimmy</a>` -}}
+
+                {{ T "footer.designedBy" (dict "Theme" $Theme "DesignedBy" $DesignedBy) | safeHTML }}
+
+                <br>
+            </section>
+
+            <br>
+
             <ol class="menu">
                 {{- $currentLanguageCode := .Language.Lang -}}
                 {{ if ( compare.Gt .Site.Home.AllTranslations.Len 1 ) }}
