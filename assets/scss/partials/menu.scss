@@ -210,6 +210,17 @@
             }
         }
 
+        &.sidebar-text {
+            &:before {
+                margin: auto;
+                content: "";
+                display: block;
+                height: 3px;
+                width: 100px;
+                background: var(--body-text-color);
+            }
+        }
+
         .powerby {
             color: var(--body-text-color);
             font-weight: normal;
